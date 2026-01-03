@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ranjan Kumar Upadhyay | Portfolio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #ffffff;
+  color: #0f172a;
+  line-height: 1.7;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* ===== HEADER ===== */
+header {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 80px 20px;
+}
+
+.hero {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* ===== PROFILE ===== */
+.profile1 {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: radial-gradient(circle at top, #f8fafc, #e5e7eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.profile1 img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+}
+
+.hero-content h3 {
+  font-weight: normal;
+  color: #475569;
+  margin: 12px 0;
+}
+
+.hero-content p {
+  max-width: 620px;
+  color: #334155;
+}
+
+.cta {
+  margin-top: 25px;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 20px;
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.cta .primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.cta .secondary {
+  border: 1px solid #2563eb;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  max-width: 1000px;
+  margin: auto;
+  padding: 70px 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  border-left: 5px solid #2563eb;
+  padding-left: 12px;
+}
+
+.card {
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.08);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #f8fafc;
+  border-top: 1px solid #e5e7eb;
+  text-align: center;
+  padding: 30px;
+  color: #475569;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="profile1">
+      <img src="profile1.jpg" alt="Ranjan Kumar Upadhyay">
+    </div>
+
+    <div class="hero-content">
+      <h1>Ranjan Kumar Upadhyay</h1>
+      <h3>MCA (Cyber Security) | AI & DevOps | Full Stack Developer</h3>
+
+      <p>
+        MCA student specializing in Cyber Security with hands-on experience in
+        DevOps, cloud monitoring, and full stack development. Focused on building
+        secure, scalable, and modern systems.
+      </p>
+
+      <div class="cta">
+        <a class="primary" href="#contact">Contact Me</a>
+        <a class="secondary"
+   href="Ranjan_Kumar_Upadhyay_DevOps_Resume.pdf"
+   target="_blank">
+   View Resume
+</a>
+
+<a class="primary"
+   href="Ranjan_Kumar_Upadhyay_DevOps_Resume.pdf"
+   download>
+   Download Resume
+</a>
+
+
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="card"><h3>Cyber Security</h3><p>Network Security, Linux, Monitoring</p></div>
+    <div class="card"><h3>AI & DevOps</h3><p>Docker, Kubernetes, CI/CD, AWS</p></div>
+    <div class="card"><h3>Full Stack</h3><p>MERN Stack, REST APIs</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>📞 6205536067</p>
+    <p>📧 <a href="mailto:rajankumarup56@zohomail.in">rajankumarup56@zohomail.in</a></p>
+    <p>🐙 <a href="https://github.com/rajankumarup56">GitHub</a></p>
+    <p>🔗 <a href="https://www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a">LinkedIn</a></p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Ranjan Kumar Upadhyay
+</footer>
+
+</body>
+</html>
