@@ -1,185 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ranjan Kumar Upadhyay | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ranjan Kumar Upadhyay | AI • DevOps • Cyber Security</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f8fafc;
-      color: #1f2937;
-      line-height: 1.6;
-    }
+<style>
+:root {
+  --bg: #f8fafc;
+  --text: #1f2937;
+  --card: #ffffff;
+  --primary: #2563eb;
+}
 
-    header {
-      background: #ffffff;
-      padding: 60px 10%;
-      display: flex;
-      gap: 40px;
-      align-items: center;
-      flex-wrap: wrap;
-    }
+body.dark {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --card: #1e293b;
+}
 
-    header img {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid #2563eb;
-    }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
 
-    .hero h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
+header, section {
+  padding: 60px 10%;
+}
 
-    .hero h3 {
-      color: #2563eb;
-      margin-bottom: 15px;
-      font-weight: 500;
-    }
+header {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+}
 
-    .buttons a {
-      text-decoration: none;
-      margin-right: 12px;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      display: inline-block;
-    }
+img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  object-fit: cover;
+}
 
-    .btn-primary {
-      background: #2563eb;
-      color: white;
-    }
+h1 { font-size: 36px; margin-bottom: 5px; }
 
-    .btn-outline {
-      border: 2px solid #2563eb;
-      color: #2563eb;
-    }
+h2 {
+  border-left: 5px solid var(--primary);
+  padding-left: 15px;
+}
 
-    section {
-      padding: 60px 10%;
-    }
+.btn {
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-right: 10px;
+  font-weight: bold;
+  display: inline-block;
+}
 
-    h2 {
-      font-size: 28px;
-      margin-bottom: 30px;
-      border-left: 5px solid #2563eb;
-      padding-left: 15px;
-    }
+.primary { background: var(--primary); color: white; }
+.outline { border: 2px solid var(--primary); color: var(--primary); }
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 20px;
+}
 
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    }
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
 
-    .card h3 {
-      margin-top: 0;
-      color: #2563eb;
-    }
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  border: 1px solid #cbd5f5;
+}
 
-    footer {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 40px 10%;
-    }
-
-    footer a {
-      color: #93c5fd;
-      text-decoration: none;
-    }
-  </style>
+footer {
+  background: #020617;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+</style>
 </head>
 
 <body>
 
-<!-- HERO SECTION -->
+<button onclick="document.body.classList.toggle('dark')" 
+style="position:fixed;top:20px;right:20px;z-index:999">
+🌙 Dark Mode
+</button>
+
 <header>
-  <img src="profile.jpg" alt="Ranjan Kumar Upadhyay">
+<img src="profile.jpg" alt="Ranjan Kumar Upadhyay">
 
-  <div class="hero">
-    <h1>Ranjan Kumar Upadhyay</h1>
-    <h3>MCA (Cyber Security) • AI & DevOps Engineer • Full Stack Developer</h3>
+<div>
+<h1>Ranjan Kumar Upadhyay</h1>
+<h3>MCA (Cyber Security) | AI & DevOps Engineer | Full Stack Developer</h3>
 
-    <p>
-      MCA student specializing in Cyber Security with hands-on experience in
-      DevOps, cloud infrastructure, and full-stack development. Passionate
-      about building secure, scalable, and automation-driven systems.
-    </p>
+<p>
+MCA student specializing in Cyber Security with hands-on experience in
+AI, DevOps, cloud infrastructure, CI/CD pipelines, Linux systems, and
+secure full-stack application development.
+</p>
 
-    <div class="buttons">
-      <a href="resume.pdf" target="_blank" class="btn-primary">View Resume</a>
-      <a href="resume.pdf" download class="btn-outline">Download Resume</a>
-      <a href="#contact" class="btn-outline">Contact Me</a>
-    </div>
-  </div>
+<a href="resume.pdf" target="_blank" class="btn primary">View Resume</a>
+<a href="resume.pdf" download class="btn outline">Download Resume</a>
+<a href="#contact" class="btn outline">Contact Me</a>
+</div>
 </header>
 
 <!-- SKILLS -->
 <section>
-  <h2>Skills</h2>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Cyber Security</h3>
-      <p>Network Security, Linux, System Monitoring, Security Fundamentals</p>
-    </div>
-
-    <div class="card">
-      <h3>AI & DevOps</h3>
-      <p>Docker, Kubernetes (Basics), CI/CD, AWS, GitHub Actions</p>
-    </div>
-
-    <div class="card">
-      <h3>Full Stack Development</h3>
-      <p>MERN Stack, REST APIs, Frontend & Backend Integration</p>
-    </div>
-  </div>
+<h2>Technical Skills</h2>
+<div class="grid">
+<div class="card"><b>Cyber Security</b><br>Linux, Network Security, Monitoring, System Hardening</div>
+<div class="card"><b>AI & DevOps</b><br>Docker, Kubernetes (Basics), CI/CD, AWS, GitHub Actions</div>
+<div class="card"><b>Full Stack Development</b><br>MERN Stack, REST APIs, Frontend & Backend Integration</div>
+</div>
 </section>
 
 <!-- PROJECTS -->
 <section>
-  <h2>Projects</h2>
+<h2>Projects</h2>
+<div class="grid">
 
-  <div class="grid">
-    <div class="card">
-      <h3>AI + DevOps Portfolio</h3>
-      <p>Personal portfolio deployed using GitHub Pages with CI/CD practices.</p>
-    </div>
+<div class="card">
+<b>AI & DevOps Portfolio Website</b>
+<p>Designed and deployed a responsive portfolio website using HTML, CSS, GitHub Pages, and CI/CD workflows.</p>
+<a href="https://rajankumarup56.github.io/Potfolio/" target="_blank">Live Website</a>
+</div>
 
-    <div class="card">
-      <h3>Cyber Security Mini Projects</h3>
-      <p>Hands-on labs focused on system security, Linux hardening, and monitoring.</p>
-    </div>
-  </div>
+<div class="card">
+<b>Secure Linux System Hardening</b>
+<p>Applied Linux security best practices including firewall rules, user permissions, logging, and monitoring.</p>
+</div>
+
+<div class="card">
+<b>CI/CD Pipeline using GitHub Actions</b>
+<p>Built automated CI/CD pipelines for build and deployment using GitHub Actions and Docker.</p>
+</div>
+
+<div class="card">
+<b>MERN Stack Web Application</b>
+<p>Developed a full-stack web application with authentication, REST APIs, and database integration.</p>
+</div>
+
+<div class="card">
+<b>AWS Cloud Infrastructure Basics</b>
+<p>Hands-on experience with AWS EC2, IAM, deployment models, and cloud fundamentals.</p>
+</div>
+
+</div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section>
+<h2>Certifications</h2>
+<div class="card">
+<ul>
+<li>Cyber Security Fundamentals</li>
+<li>Linux Administration Essentials</li>
+<li>Cloud Computing Fundamentals</li>
+<li>DevOps Fundamentals</li>
+</ul>
+</div>
 </section>
 
 <!-- CONTACT -->
 <section id="contact">
-  <h2>Contact</h2>
+<h2>Contact Information</h2>
 
-  <div class="card">
-    <p><strong>Email:</strong> <a href="mailto:ranjankumarupadhyay@email.com">ranjankumarupadhyay@email.com</a></p>
-    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank">View Profile</a></p>
-    <p><strong>GitHub:</strong> <a href="https://github.com/rajankumarup56" target="_blank">github.com/rajankumarup56</a></p>
-  </div>
+<div class="grid">
+<div class="card">
+<p><b>Email:</b> (Add your professional email here)</p>
+<p><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a" target="_blank">
+linkedin.com/in/ranjan-kumar-upadhyay
+</a></p>
+<p><b>GitHub:</b> <a href="https://github.com/rajankumarup56" target="_blank">
+github.com/rajankumarup56
+</a></p>
+</div>
+
+<div class="card">
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button class="btn primary" type="submit">Send Message</button>
+</form>
+<p style="font-size:13px;margin-top:10px;">
+* Message form is UI-only (can be connected later)
+</p>
+</div>
+</div>
 </section>
 
 <footer>
-  <p>© 2026 Ranjan Kumar Upadhyay • Built with ❤️ using HTML & CSS</p>
+© 2026 Ranjan Kumar Upadhyay | AI • DevOps • Cyber Security  
 </footer>
 
 </body>
