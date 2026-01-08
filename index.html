@@ -1,246 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO META TAGS -->
-  <title>Ranjan Kumar Upadhyay | MCA Cyber Security | AI & DevOps Engineer</title>
-  <meta name="description" content="Ranjan Kumar Upadhyay - MCA Cyber Security student, AI & DevOps Engineer, Full Stack Developer. Portfolio showcasing projects, skills, and certifications.">
-  <meta name="keywords" content="Ranjan Kumar Upadhyay, MCA Cyber Security, DevOps Engineer, AI Engineer, Full Stack Developer, GitHub Portfolio, Entry Level DevOps">
+  <title>Ranjan Kumar Upadhyay | AI • DevOps • Cyber Security</title>
+
+  <!-- SEO + ATS -->
+  <meta name="description" content="Portfolio of Ranjan Kumar Upadhyay, MCA Cyber Security student specializing in AI, DevOps, Cloud, and Cyber Security. Available for internships and entry-level roles.">
+  <meta name="keywords" content="Ranjan Kumar Upadhyay, AI, DevOps, Cyber Security, MCA, AWS, CI/CD, GitHub Portfolio">
   <meta name="author" content="Ranjan Kumar Upadhyay">
 
-  <!-- Open Graph (LinkedIn Preview) -->
-  <meta property="og:title" content="Ranjan Kumar Upadhyay | AI & DevOps Engineer">
-  <meta property="og:description" content="MCA Cyber Security student with hands-on experience in DevOps, Cloud, and Full Stack Development.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://rajankumarup56.github.io/Potfolio/">
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
   <style>
-    :root {
-      --bg: #f8fafc;
-      --text: #1f2937;
-      --card: #ffffff;
-      --primary: #2563eb;
-      --badge: #16a34a;
-    }
-
-    body.dark {
-      --bg: #0f172a;
-      --text: #e5e7eb;
-      --card: #1e293b;
-    }
-
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
+      margin: 0;
+      background: #f4f6f8;
+      color: #222;
       line-height: 1.6;
     }
-
-    header, section {
-      padding: 60px 10%;
-    }
-
     header {
-      display: flex;
-      gap: 40px;
-      flex-wrap: wrap;
-      align-items: center;
+      background: #0a192f;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
     }
-
-    img {
-      width: 220px;
-      height: 220px;
+    header img {
+      width: 140px;
       border-radius: 50%;
-      border: 4px solid var(--primary);
-      object-fit: cover;
-    }
-
-    h1 { font-size: 36px; margin-bottom: 5px; }
-
-    h2 {
-      border-left: 5px solid var(--primary);
-      padding-left: 15px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: var(--badge);
-      color: white;
-      padding: 6px 12px;
-      border-radius: 20px;
-      font-size: 14px;
-      margin: 10px 0;
-    }
-
-    .location {
-      font-size: 14px;
       margin-bottom: 15px;
     }
-
-    .btn {
-      padding: 12px 18px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-right: 10px;
-      font-weight: bold;
+    .badge {
       display: inline-block;
+      background: #22c55e;
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-top: 10px;
+      font-size: 14px;
     }
-
-    .primary { background: var(--primary); color: white; }
-    .outline { border: 2px solid var(--primary); color: var(--primary); }
-
-    .grid {
+    section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h2 {
+      border-left: 5px solid #2563eb;
+      padding-left: 10px;
+      color: #0a192f;
+    }
+    .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
-
     .card {
-      background: var(--card);
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
-
-    input, textarea {
+    .card a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    form input, form textarea, form button {
       width: 100%;
       padding: 12px;
       margin-top: 10px;
       border-radius: 6px;
-      border: 1px solid #cbd5f5;
+      border: 1px solid #ccc;
     }
-
+    form button {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
     footer {
-      background: #020617;
-      color: white;
+      background: #0a192f;
+      color: #fff;
       text-align: center;
-      padding: 30px;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .dark-mode {
+      background: #020617;
+      color: #e5e7eb;
+    }
+    .dark-mode .card {
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    .toggle {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      padding: 8px 12px;
+      cursor: pointer;
     }
   </style>
 </head>
 
 <body>
 
-<button onclick="document.body.classList.toggle('dark')" 
-style="position:fixed;top:20px;right:20px;z-index:999">
-🌙 Dark Mode
-</button>
+<button class="toggle" onclick="toggleDark()">🌙 Dark Mode</button>
 
 <header>
   <img src="profile.jpg" alt="Ranjan Kumar Upadhyay">
-
-  <div>
-    <h1>Ranjan Kumar Upadhyay</h1>
-    <h3>MCA (Cyber Security) | AI & DevOps Engineer | Full Stack Developer</h3>
-
-    <div class="badge">Available for Internships & Entry-Level Roles</div>
-    <div class="location">📍 Noida, U.P, India</div>
-
-    <p>
-      MCA Cyber Security student with hands-on experience in AI, DevOps, cloud infrastructure,
-      CI/CD pipelines, Linux systems, and secure full-stack application development.
-    </p>
-
-    <a href="resume.pdf" target="_blank" class="btn primary">View Resume</a>
-    <a href="resume.pdf" download class="btn outline">Download Resume</a>
-    <a href="#contact" class="btn outline">Contact Me</a>
-  </div>
+  <h1>Ranjan Kumar Upadhyay</h1>
+  <p>MCA (Cyber Security) | AI • DevOps • Cloud • Cyber Security</p>
+  <p>📍 Noida, Uttar Pradesh, India</p>
+  <span class="badge">Available for Internships & Entry-Level Roles</span>
 </header>
 
 <section>
-  <h2>Technical Skills</h2>
-  <div class="grid">
-    <div class="card"><b>Cyber Security</b><br>Linux, Network Security, Monitoring, System Hardening</div>
-    <div class="card"><b>AI & DevOps</b><br>Docker, Kubernetes (Basics), CI/CD, AWS, GitHub Actions</div>
-    <div class="card"><b>Full Stack Development</b><br>MERN Stack, REST APIs, Git & GitHub</div>
-  </div>
+  <h2>About Me</h2>
+  <p>
+    I am an MCA (Cyber Security) student with strong interest in Artificial Intelligence,
+    DevOps, Cloud Computing, and Cyber Security. I enjoy building secure,
+    automated, and scalable systems and continuously learning new technologies.
+  </p>
+</section>
+
+<section>
+  <h2>What I’m Learning Now</h2>
+  <p>
+    Currently improving skills in <strong>AWS Cloud, CI/CD pipelines, Docker,
+    Linux security, GitHub Actions, and Python automation</strong>.
+  </p>
 </section>
 
 <section>
   <h2>Projects</h2>
-  <div class="grid">
+  <div class="cards">
     <div class="card">
-      <b>AI & DevOps Portfolio Website</b>
-      <p>Responsive portfolio deployed on GitHub Pages using CI/CD concepts.</p>
-      <a href="https://rajankumarup56.github.io/Potfolio/" target="_blank">Live Project</a>
+      <h3>AI Resume Analyzer</h3>
+      <p>Resume screening using NLP concepts for ATS optimization.</p>
+      <a href="https://github.com/rajankumarup56" target="_blank">GitHub →</a>
     </div>
 
     <div class="card">
-      <b>CI/CD Pipeline with GitHub Actions</b>
-      <p>Automated build and deployment pipeline using Docker and GitHub Actions.</p>
+      <h3>CI/CD Pipeline (GitHub Actions)</h3>
+      <p>Automated build and deployment using GitHub Actions.</p>
+      <a href="https://github.com/rajankumarup56" target="_blank">GitHub →</a>
     </div>
 
     <div class="card">
-      <b>Secure Linux System Hardening</b>
-      <p>Applied firewall rules, permissions, logging, and monitoring best practices.</p>
+      <h3>Cyber Security Threat Detection</h3>
+      <p>Basic intrusion detection using logs and monitoring.</p>
+      <a href="https://github.com/rajankumarup56" target="_blank">GitHub →</a>
     </div>
 
     <div class="card">
-      <b>MERN Stack Web Application</b>
-      <p>Full-stack app with authentication, REST APIs, and database integration.</p>
+      <h3>Cloud Monitoring Scripts</h3>
+      <p>Resource monitoring and alert scripts.</p>
+      <a href="https://github.com/rajankumarup56" target="_blank">GitHub →</a>
     </div>
 
     <div class="card">
-      <b>AWS Cloud Infrastructure Basics</b>
-      <p>Hands-on experience with EC2, IAM, and cloud deployment fundamentals.</p>
+      <h3>Personal Portfolio Website</h3>
+      <p>Responsive portfolio with dark mode and SEO.</p>
+      <a href="https://github.com/rajankumarup56/Potfolio" target="_blank">GitHub →</a>
     </div>
   </div>
 </section>
 
 <section>
   <h2>Certifications</h2>
-  <div class="card">
-    <ul>
-      <li>Cyber Security Fundamentals</li>
-      <li>Linux Administration Essentials</li>
-      <li>Cloud Computing Fundamentals</li>
-      <li>DevOps Fundamentals</li>
-    </ul>
-  </div>
+  <ul>
+    <li>Introduction to Cyber Security – Cisco</li>
+    <li>Cloud Fundamentals – AWS (Learning)</li>
+    <li>Git & GitHub Essentials</li>
+    <li>Linux Basics for Security</li>
+  </ul>
 </section>
 
-<section id="contact">
+<section>
   <h2>Contact Me</h2>
+  <p><strong>Email:</strong> <a href="mailto:rajankumarup56@zohomail.in">rajankumarup56@zohomail.in</a></p>
+  <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a" target="_blank">LinkedIn Profile</a></p>
+  <p><strong>GitHub:</strong> <a href="https://github.com/rajankumarup56" target="_blank">GitHub Profile</a></p>
 
-  <div class="grid">
-    <div class="card">
-      <p>
-  <b>Email:</b>
-  <a href="mailto:rajankumarup56@zohomail.in" style="color:#2563eb;">
-    rajankumarup56@zohomail.in
-  </a>
-</p>
-
-      <p><b>LinkedIn:</b>
-        <a href="https://www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a" target="_blank">
-          linkedin.com/in/ranjan-kumar-upadhyay
-        </a>
-      </p>
-      <p><b>GitHub:</b>
-        <a href="https://github.com/rajankumarup56" target="_blank">
-          github.com/rajankumarup56
-        </a>
-      </p>
-    </div>
-
-    <div class="card">
-      <!-- 🔴 REPLACE action URL WITH YOUR FORMSPREE URL -->
-      <form action="https://formspree.io/f/REPLACE_THIS" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button class="btn primary" type="submit">Send Message</button>
-      </form>
-    </div>
-  </div>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 <footer>
-© 2026 Ranjan Kumar Upadhyay | AI • DevOps • Cyber Security
+  <p>📄 Resume last updated: January 2026</p>
+  <p>© 2026 Ranjan Kumar Upadhyay | AI • DevOps • Cyber Security</p>
 </footer>
+
+<script>
+  function toggleDark() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
 
 </body>
 </html>
