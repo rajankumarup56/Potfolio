@@ -203,22 +203,6 @@ footer {
   © 2026 Ranjan Kumar Upadhyay
 </footer>
 
-<script>
-function toggleMode() {
-  document.body.classList.toggle("light");
-}
-
-/* Skill animation */
-const bars = document.querySelectorAll(".bar div");
-window.addEventListener("scroll", () => {
-  bars.forEach(bar => {
-    const top = bar.getBoundingClientRect().top;
-    if (top < window.innerHeight) {
-      bar.style.width = bar.dataset.width;
-    }
-  });
-});
-</script>
-
+<script src="js/script.js"></script>
 </body>
 </html>
