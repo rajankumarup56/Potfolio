@@ -3,12 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Ranjan Kumar Upadhyay | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
+:root {
+  --bg: #0f172a;
+  --card: #020617;
+  --text: #e5e7eb;
+  --accent: #38bdf8;
+}
+
+.light {
+  --bg: #f9fafb;
+  --card: #ffffff;
+  --text: #020617;
+  --accent: #2563eb;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,17 +30,15 @@
 }
 
 body {
-  background: #0f172a;
-  color: #e5e7eb;
-  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
 }
 
-/* NAVBAR */
 header {
-  background: rgba(2,6,23,0.9);
+  background: var(--card);
   position: sticky;
   top: 0;
-  z-index: 100;
 }
 
 nav {
@@ -40,12 +51,16 @@ nav {
 }
 
 nav a {
-  color: #e5e7eb;
-  margin-left: 20px;
+  color: var(--text);
   text-decoration: none;
+  margin-left: 20px;
 }
 
-/* SECTIONS */
+.toggle {
+  cursor: pointer;
+  font-size: 18px;
+}
+
 section {
   max-width: 1100px;
   margin: auto;
@@ -53,61 +68,60 @@ section {
   text-align: center;
 }
 
-/* HERO */
 .hero img {
   width: 160px;
   border-radius: 50%;
-  border: 4px solid #38bdf8;
+  border: 4px solid var(--accent);
   margin-bottom: 20px;
-  animation: float 4s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
 }
 
 h1 span {
-  color: #38bdf8;
+  color: var(--accent);
 }
 
 .btn {
   display: inline-block;
   margin: 10px;
   padding: 12px 28px;
-  background: #38bdf8;
-  color: #020617;
+  background: var(--accent);
+  color: #000;
   border-radius: 25px;
   font-weight: 600;
   text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(56,189,248,0.4);
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+/* SKILLS */
+.skill {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.bar {
+  height: 8px;
+  background: #1e293b;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  width: 0;
+  background: var(--accent);
+  transition: width 1.5s ease;
 }
 
 /* PROJECTS */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 20px;
-}
-
-.card {
-  background: #020617;
-  padding: 25px;
-  border-radius: 15px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.6s ease;
-}
-
-.card.show {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 footer {
@@ -124,29 +138,41 @@ footer {
   <nav>
     <strong>Ranjan</strong>
     <div>
-      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
+      <span class="toggle" onclick="toggleMode()">🌙</span>
     </div>
   </nav>
 </header>
 
 <section class="hero">
   <img src="assets/profile.jpg" alt="Ranjan Kumar">
-
   <h1>Hi, I'm <span>Ranjan Kumar</span></h1>
   <p>DevOps • Cloud • Cybersecurity</p>
 
-  <a href="#projects" class="btn">View Projects</a>
   <a href="assets/resume.pdf" class="btn" download>Download Resume</a>
 </section>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    I am a DevOps and Cloud enthusiast with strong interest in Linux, AWS,
-    CI/CD pipelines, and system security. I believe in learning by building real projects.
-  </p>
+<section id="skills">
+  <h2>Skills</h2>
+
+  <div class="card">
+    <div class="skill">
+      <p>Linux</p>
+      <div class="bar"><div data-width="90%"></div></div>
+    </div>
+
+    <div class="skill">
+      <p>AWS</p>
+      <div class="bar"><div data-width="85%"></div></div>
+    </div>
+
+    <div class="skill">
+      <p>Docker / CI-CD</p>
+      <div class="bar"><div data-width="80%"></div></div>
+    </div>
+  </div>
 </section>
 
 <section id="projects">
@@ -155,29 +181,22 @@ footer {
   <div class="grid">
     <div class="card">
       <h3>AWS Infrastructure</h3>
-      <p>EC2, VPC, IAM architecture</p>
-      <a class="btn" href="https://github.com/rajankumarup56" target="_blank">GitHub</a>
+      <p>VPC, EC2, IAM</p>
+      <a class="btn" href="projects.html">View Details</a>
     </div>
 
     <div class="card">
       <h3>CI/CD Pipeline</h3>
-      <p>GitHub Actions + Docker</p>
-      <a class="btn" href="https://github.com/rajankumarup56" target="_blank">GitHub</a>
-    </div>
-
-    <div class="card">
-      <h3>Linux Security Lab</h3>
-      <p>System hardening & testing</p>
-      <a class="btn" href="https://github.com/rajankumarup56" target="_blank">GitHub</a>
+      <p>GitHub Actions</p>
+      <a class="btn" href="projects.html">View Details</a>
     </div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
+  <p>⚠️ This form will use BACKEND (Node.js)</p>
   <p>Email: your-email@example.com</p>
-  <a class="btn" href="https://github.com/rajankumarup56" target="_blank">GitHub</a>
-  <a class="btn" href="https://www.linkedin.com" target="_blank">LinkedIn</a>
 </section>
 
 <footer>
@@ -185,15 +204,17 @@ footer {
 </footer>
 
 <script>
-/* Scroll animation */
-const cards = document.querySelectorAll(".card");
+function toggleMode() {
+  document.body.classList.toggle("light");
+}
 
+/* Skill animation */
+const bars = document.querySelectorAll(".bar div");
 window.addEventListener("scroll", () => {
-  const trigger = window.innerHeight * 0.85;
-  cards.forEach(card => {
-    const top = card.getBoundingClientRect().top;
-    if (top < trigger) {
-      card.classList.add("show");
+  bars.forEach(bar => {
+    const top = bar.getBoundingClientRect().top;
+    if (top < window.innerHeight) {
+      bar.style.width = bar.dataset.width;
     }
   });
 });
