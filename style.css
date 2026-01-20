@@ -87,3 +87,12 @@ h2 {
   color: #60a5fa;
   text-decoration: none;
 }
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+  border: 3px solid #00adb5;
+}
