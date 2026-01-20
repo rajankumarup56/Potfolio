@@ -4,136 +4,213 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ranjan Kumar Upadhyay | DevOps & Cloud Engineer</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #ffffff;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #0f172a;
+      color: #fff;
+      padding: 15px 30px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 40px 30px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #1e3a8a;
+    }
+    .hero {
+      text-align: center;
+      padding-top: 60px;
+    }
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+    }
+    .btn-group a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 18px;
+      border-radius: 6px;
+      background: #1e3a8a;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+    .project-card {
+      border: 1px solid #ddd;
+      padding: 25px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      background: #f9fafb;
+    }
+    .project-card img {
+      max-width: 100%;
+      border: 1px solid #ccc;
+      margin: 15px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0f172a;
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body>
 
-<header class="header">
-  <nav class="navbar">
-    <div class="logo">Ranjan</div>
-    <ul class="nav-links">
+<!-- HEADER -->
+<header>
+  <nav>
+    <div><strong>Ranjan</strong></div>
+    <ul>
       <li><a href="#home">Home</a></li>
-      <li><a href="#build">What I Build</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#learning">Learning</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 </header>
 
+<!-- HOME -->
 <section id="home" class="hero">
   <h1>Ranjan Kumar Upadhyay</h1>
-  <h3>DevOps & Cloud Engineer (Fresher) | MCA – Cyber Security</h3>
-  <img src="./images/profile.jpg"
-     alt="Ranjan Kumar Upadhyay"
-     class="profile-pic">
-
+  <h3>DevOps & Cloud Engineer (Fresher)</h3>
   <p>
-    Hands-on experience in CI/CD pipelines, containerized deployments,
-    AWS cloud services, monitoring, and automation.
-    Building secure, scalable, and AIOps-ready systems using DevOps best practices.
+    MCA (Cyber Security) student with hands-on experience in AWS,
+    CI/CD pipelines, containerization, monitoring, and event-driven architectures.
+    Passionate about building scalable, secure, and automated cloud systems.
   </p>
 
-  <div class="hero-buttons">
+  <div class="btn-group">
     <a href="#projects">View Projects</a>
     <a href="https://github.com/rajankumarup56" target="_blank">GitHub</a>
     <a href="https://www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a" target="_blank">LinkedIn</a>
-    <img src="images/aws-event-architecture.png" alt="AWS Event Architecture">
-<a href="resume/Ranjan_Resume.pdf" download>Download Resume</a>
-
+    <a href="resume/Ranjan_Resume.pdf" target="_blank">Resume</a>
   </div>
 </section>
 
-<section id="build">
-  <h2>What I Build as a DevOps Engineer</h2>
-  <div class="grid">
-    <div class="card">CI/CD Automation using Jenkins & Git</div>
-    <div class="card">Cloud-Native AWS Architectures</div>
-    <div class="card">Docker & Kubernetes Deployments</div>
-    <div class="card">Security-Aware DevOps (DevSecOps)</div>
-    <div class="card">Monitoring & Observability Systems</div>
-  </div>
-</section>
-
+<!-- SKILLS -->
 <section id="skills">
   <h2>Skills</h2>
-  <div class="skills-grid">
-    <div><strong>DevOps & Cloud</strong><p>Jenkins, Docker, Kubernetes, AWS</p></div>
-    <div><strong>Security</strong><p>DevSecOps, IAM, Cyber Security</p></div>
-    <div><strong>Monitoring</strong><p>CloudWatch, Prometheus, Grafana, ELK</p></div>
-    <div><strong>Automation</strong><p>Python, Bash, JavaScript</p></div>
-    <div><strong>IaC</strong><p>Terraform (Foundational)</p></div>
+  <div class="grid">
+    <div class="card">
+      <strong>DevOps & Cloud</strong>
+      <p>AWS, Jenkins, Docker, Kubernetes</p>
+    </div>
+    <div class="card">
+      <strong>Monitoring</strong>
+      <p>CloudWatch, Prometheus, Grafana</p>
+    </div>
+    <div class="card">
+      <strong>Security</strong>
+      <p>IAM, DevSecOps, Cyber Security Basics</p>
+    </div>
+    <div class="card">
+      <strong>Automation</strong>
+      <p>Bash, Python, JavaScript</p>
+    </div>
+    <div class="card">
+      <strong>IaC</strong>
+      <p>Terraform (Foundational)</p>
+    </div>
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section id="projects">
   <h2>Projects</h2>
 
+  <!-- MAIN DEVOPS PROJECT -->
   <div class="project-card">
-    <h3>Event-Driven Notification System (AWS)</h3>
-    <p><strong>Architecture:</strong> SNS → SQS → Lambda → SES</p>
+    <h3>Secure AWS Cloud Infrastructure (Event-Driven)</h3>
+
+    <img src="images/aws-event-architecture.png" alt="AWS Event Driven Architecture">
+
+    <p>
+      Designed an event-driven serverless architecture using AWS SNS, SQS,
+      Lambda, and SES focusing on decoupling, scalability, and fault tolerance.
+    </p>
+
     <ul>
-      <li>Designed scalable event-driven architecture</li>
-      <li>Processed events using AWS Lambda</li>
-      <li>Automated notifications via SES</li>
+      <li>SNS for event publishing</li>
+      <li>SQS for buffering & retry mechanism</li>
+      <li>Lambda for processing events</li>
+      <li>SES for email notifications</li>
     </ul>
-    <a href="https://github.com/rajankumarup56" target="_blank">View on GitHub</a>
+
+    <a href="https://rajankumarup56.github.io/secure-aws-cloud-infrastructure/" target="_blank">
+      🔗 View Full Project
+    </a>
   </div>
 
+  <!-- OTHER PROJECTS -->
   <div class="project-card">
-    <h3>Secure CI/CD Pipeline with DevSecOps Practices</h3>
-    <ul>
-      <li>Built Jenkins CI/CD pipelines</li>
-      <li>Dockerized applications</li>
-      <li>Deployed to Kubernetes</li>
-    </ul>
-    <a href="https://github.com/rajankumarup56" target="_blank">View on GitHub</a>
+    <h3>CI/CD Pipeline with Jenkins & Docker</h3>
+    <p>
+      Built automated CI/CD pipelines using Jenkins,
+      Dockerized applications, and deployed on cloud infrastructure.
+    </p>
   </div>
 
-  <div class="project-card">
-    <h3>Additional DevOps Projects</h3>
-    <ul>
-      <li>Dockerized web app on AWS EC2 (Nginx)</li>
-      <li>Kubernetes microservices deployment</li>
-      <li>AWS Infrastructure automation using Terraform</li>
-      <li>Linux automation using Bash scripting</li>
-    </ul>
-    <a href="https://github.com/rajankumarup56" target="_blank">View on GitHub</a>
-  </div>
 </section>
 
-<section id="experience">
-  <h2>Experience</h2>
-  <div class="project-card">
-    <h3>DevOps Engineer Intern — Orbiqe Technologies</h3>
-    <ul>
-      <li>CI/CD automation using Jenkins</li>
-      <li>Docker & Kubernetes deployments</li>
-      <li>Monitoring with CloudWatch & Grafana</li>
-    </ul>
-  </div>
-</section>
-
-<section id="learning">
-  <h2>Continuous Learning & Future Focus</h2>
-  <p>
-    Exploring AIOps concepts, automation intelligence, and AI-driven monitoring
-    while strengthening DevOps and cloud fundamentals.
-  </p>
-</section>
-
+<!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: rajankumarup56@zohomail.com</p>
+  <p>Email: <strong>rajankumarup56@zohomail.com</strong></p>
   <p>
     <a href="https://github.com/rajankumarup56" target="_blank">GitHub</a> |
     <a href="https://www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a" target="_blank">LinkedIn</a>
   </p>
 </section>
 
+<footer>
+  © 2026 Ranjan Kumar Upadhyay | DevOps & Cloud
+</footer>
+
+<!-- JS -->
 <script src="script.js"></script>
+
 </body>
 </html>
