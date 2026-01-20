@@ -1,17 +1,13 @@
-// DARK / LIGHT MODE
+// DARK / LIGHT TOGGLE
 function toggleMode() {
   document.body.classList.toggle("light");
 }
 
 // SKILL BAR ANIMATION
-const bars = document.querySelectorAll(".bar div");
-
 window.addEventListener("scroll", () => {
-  bars.forEach(bar => {
-    const barTop = bar.getBoundingClientRect().top;
-    const screenHeight = window.innerHeight;
-
-    if (barTop < screenHeight) {
+  document.querySelectorAll(".bar div").forEach(bar => {
+    const top = bar.getBoundingClientRect().top;
+    if (top < window.innerHeight) {
       bar.style.width = bar.dataset.width;
     }
   });

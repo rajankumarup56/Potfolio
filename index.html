@@ -15,7 +15,7 @@
   --accent: #38bdf8;
 }
 
-.light {
+body.light {
   --bg: #f9fafb;
   --card: #ffffff;
   --text: #020617;
@@ -35,10 +35,12 @@ body {
   transition: 0.3s;
 }
 
+/* NAVBAR */
 header {
   background: var(--card);
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 nav {
@@ -61,6 +63,7 @@ nav a {
   font-size: 18px;
 }
 
+/* HERO */
 section {
   max-width: 1100px;
   margin: auto;
@@ -88,13 +91,25 @@ h1 span {
   border-radius: 25px;
   font-weight: 600;
   text-decoration: none;
+  transition: 0.3s;
 }
 
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+/* CARD */
 .card {
   background: var(--card);
   padding: 25px;
   border-radius: 15px;
   margin-bottom: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 /* SKILLS */
@@ -172,30 +187,58 @@ footer {
       <p>Docker / CI-CD</p>
       <div class="bar"><div data-width="80%"></div></div>
     </div>
+
+    <div class="skill">
+      <p>Cybersecurity</p>
+      <div class="bar"><div data-width="75%"></div></div>
+    </div>
   </div>
 </section>
 
 <section id="projects">
   <h2>Projects</h2>
-
   <div class="grid">
     <div class="card">
-      <h3>AWS Infrastructure</h3>
-      <p>VPC, EC2, IAM</p>
-      <a class="btn" href="projects.html">View Details</a>
+      <h3>AI DevOps Monitoring</h3>
+      <p>AI-driven monitoring for DevOps incidents.</p>
+      <a class="btn" href="https://github.com/rajankumarup56/ai-devops-monitoring-incident-prediction" target="_blank">GitHub</a>
     </div>
 
     <div class="card">
-      <h3>CI/CD Pipeline</h3>
-      <p>GitHub Actions</p>
-      <a class="btn" href="projects.html">View Details</a>
+      <h3>DevSecOps Pipeline</h3>
+      <p>Automated security scanning CI/CD pipeline.</p>
+      <a class="btn" href="https://github.com/rajankumarup56/devsecops-pipeline-automated-security-scanning" target="_blank">GitHub</a>
+    </div>
+
+    <div class="card">
+      <h3>Network Security Lab</h3>
+      <p>Cybersecurity threat detection and labs.</p>
+      <a class="btn" href="https://github.com/rajankumarup56/network-security-threat-detection-lab" target="_blank">GitHub</a>
+    </div>
+
+    <div class="card">
+      <h3>Portfolio Website</h3>
+      <p>My personal portfolio site built with HTML, CSS, and JS.</p>
+      <a class="btn" href="https://github.com/rajankumarup56/Personal-portfolio-website" target="_blank">GitHub</a>
+    </div>
+
+    <div class="card">
+      <h3>Secure AWS Infrastructure</h3>
+      <p>Secured cloud setup using best practices.</p>
+      <a class="btn" href="https://github.com/rajankumarup56/secure-aws-cloud-infrastructure" target="_blank">GitHub</a>
+    </div>
+
+    <div class="card">
+      <h3>Secure CI/CD DevSecOps</h3>
+      <p>Secure pipeline implementation for DevSecOps.</p>
+      <a class="btn" href="https://github.com/rajankumarup56/secure-cicd-devsecops-pipeline" target="_blank">GitHub</a>
     </div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>⚠️ This form will use BACKEND (Node.js)</p>
+  <p>⚠️ Contact form will be implemented with backend later</p>
   <p>Email: your-email@example.com</p>
 </section>
 
