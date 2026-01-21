@@ -2,13 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ranjan Kumar Upadhyay | DevOps & Cloud Engineer</title>
 
   <style>
-    body {
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
       background: #ffffff;
       color: #333;
       line-height: 1.6;
@@ -17,22 +23,42 @@
     header {
       background: #0f172a;
       color: #fff;
-      padding: 40px 20px;
       text-align: center;
+      padding: 60px 20px;
     }
 
     header img {
       width: 150px;
+      height: 150px;
+      object-fit: cover;
       border-radius: 50%;
-      border: 3px solid #fff;
-      margin: 20px 0;
+      border: 4px solid #38bdf8;
+      margin-bottom: 15px;
     }
 
-    header a {
-      color: #93c5fd;
+    header h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 12px 8px 0;
+      padding: 8px 14px;
+      background: #1e40af;
+      color: #fff;
       text-decoration: none;
-      margin: 0 8px;
-      font-weight: bold;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .links a:hover {
+      background: #2563eb;
     }
 
     section {
@@ -41,28 +67,47 @@
       padding: 50px 20px;
     }
 
-    h1, h2, h3 {
+    h2 {
       color: #0f172a;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 8px;
     }
 
-    .skills, .projects {
+    .about p {
+      max-width: 850px;
+    }
+
+    .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      margin-top: 25px;
     }
 
     .card {
-      border: 1px solid #ddd;
+      background: #f8fafc;
       padding: 20px;
-      border-radius: 10px;
-      background: #f9fafb;
+      border-radius: 8px;
+      border: 1px solid #e5e7eb;
     }
 
-    .card img {
-      max-width: 100%;
+    .project img {
+      width: 100%;
       border-radius: 6px;
-      margin-bottom: 10px;
+      border: 1px solid #d1d5db;
+      margin: 15px 0;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #1d4ed8;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -71,11 +116,12 @@
       text-align: center;
       padding: 20px;
       margin-top: 40px;
+      font-size: 14px;
     }
 
     @media (max-width: 600px) {
       header h1 {
-        font-size: 22px;
+        font-size: 24px;
       }
     }
   </style>
@@ -85,43 +131,33 @@
 
 <!-- HERO / HEADER -->
 <header>
-  <h1>Ranjan Kumar Upadhyay</h1>
-
-  <!-- ✅ Profile Photo -->
   <img src="images/profile.jpg" alt="Ranjan Kumar Upadhyay">
 
-  <p>
-    MCA (Cyber Security) <br>
-    DevOps & Cloud Engineer (Fresher)
-  </p>
+  <h1>Ranjan Kumar Upadhyay</h1>
+  <p>MCA (Cyber Security) | DevOps & Cloud Engineer (Fresher)</p>
 
-  <p>
-    <a href="https://github.com/rajankumarup56" target="_blank">GitHub</a> |
-    <a href="https://www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a" target="_blank">LinkedIn</a> |
-    <a href="https://twitter.com/yourhandle" target="_blank">Twitter (X)</a> |
+  <div class="links">
+    <a href="https://github.com/rajankumarup56" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a" target="_blank">LinkedIn</a>
+    <a href="https://twitter.com/" target="_blank">Twitter (X)</a>
     <a href="resume/Ranjan_Resume.pdf" target="_blank">Resume</a>
-  </p>
+  </div>
 </header>
 
 <!-- ABOUT -->
-<section>
+<section class="about">
   <h2>About Me</h2>
   <p>
-    I am an MCA (Cyber Security) student and DevOps & Cloud Engineering fresher
-    with hands-on experience in AWS, CI/CD pipelines, containerization,
-    monitoring, and event-driven architectures.
-  </p>
-  <p>
-    My focus is on building secure, scalable, and automated cloud systems using
-    DevOps best practices. I am actively seeking entry-level DevOps / Cloud
-    Engineer roles where I can learn, contribute, and grow.
+    I am an MCA (Cyber Security) student and aspiring DevOps & Cloud Engineer with hands-on
+    experience in AWS, CI/CD pipelines, containerization, monitoring, and event-driven architectures.
+    I focus on building secure, scalable, and automated cloud systems using industry best practices.
   </p>
 </section>
 
 <!-- SKILLS -->
 <section>
   <h2>Skills</h2>
-  <div class="skills">
+  <div class="grid">
     <div class="card">AWS (EC2, S3, IAM, SNS, SQS, Lambda)</div>
     <div class="card">Docker & Kubernetes</div>
     <div class="card">CI/CD – Jenkins & GitHub Actions</div>
@@ -136,46 +172,35 @@
 <section>
   <h2>Projects</h2>
 
-  <div class="projects">
-
-    <div class="card">
+  <div class="grid">
+    <div class="card project">
       <h3>Secure AWS Event-Driven Architecture</h3>
       <img src="images/aws-event-architecture.png" alt="AWS Event Driven Architecture">
       <p>
-        Designed and implemented a serverless event-driven architecture using
-        AWS SNS, SQS, Lambda, and SES focusing on decoupling, scalability,
+        Designed an event-driven serverless architecture using
+        SNS → SQS → Lambda → SES with decoupling, buffering,
         retry handling, and fault tolerance.
       </p>
       <a href="https://rajankumarup56.github.io/secure-aws-cloud-infrastructure/" target="_blank">
-        🔗 View Live Project
+        View Live Project →
       </a>
     </div>
 
-    <div class="card">
+    <div class="card project">
       <h3>CI/CD Pipeline with Jenkins & Docker</h3>
       <p>
-        Built automated CI/CD pipelines using Jenkins,
-        Dockerized applications, and deployed them on cloud infrastructure
-        following DevOps best practices.
+        Built automated CI/CD pipelines using Jenkins, Docker,
+        GitHub, and cloud deployment workflows following DevOps best practices.
       </p>
-      <a href="https://github.com/rajankumarup56" target="_blank">
-        🔗 View on GitHub
-      </a>
     </div>
-
   </div>
 </section>
 
 <!-- CONTACT -->
 <section>
   <h2>Contact</h2>
-  <p>📧 Email: <strong>rajankumarup56@zohomail.com</strong></p>
-  <p>📞 Phone: <strong>+91 6205536067</strong></p>
-  <p>
-    🔗 <a href="https://www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a" target="_blank">
-      LinkedIn Profile
-    </a>
-  </p>
+  <p><strong>Email:</strong> rajankumarup56@zohomail.com</p>
+  <p><strong>Phone:</strong> +91 6205536067</p>
 </section>
 
 <footer>
