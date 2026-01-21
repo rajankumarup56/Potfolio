@@ -3,9 +3,9 @@ body {
   font-family: Arial, sans-serif;
   background: #f9fafb;
   color: #111827;
+  line-height: 1.6;
 }
 
-/* HEADER */
 header {
   background: #020617;
   color: white;
@@ -14,25 +14,29 @@ header {
 }
 
 header img {
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: 3px solid #2563eb;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-.links {
-  margin-top: 15px;
+header h1 {
+  margin: 10px 0;
+}
+
+header h2 {
+  font-weight: normal;
+  color: #cbd5e1;
 }
 
 .links a {
   margin: 0 8px;
   color: #60a5fa;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: bold;
 }
 
-/* SECTIONS */
 section {
   max-width: 1000px;
   margin: auto;
@@ -45,7 +49,6 @@ h2 {
   padding-bottom: 5px;
 }
 
-/* SKILLS GRID */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -53,25 +56,12 @@ h2 {
   margin-top: 20px;
 }
 
-/* PROJECT GRID */
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  margin-top: 20px;
-}
-
-/* CARD */
 .card {
   background: white;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-}
-
-/* SKILL CARD */
-.grid .card {
+  border-radius: 8px;
   text-align: center;
+  border: 1px solid #e5e7eb;
 }
 
 .card img {
@@ -79,36 +69,46 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* PROJECT CARD */
-.project-card {
-  text-align: left;
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
 }
 
-.project-img {
+.project-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+}
+
+.project-card img {
   width: 100%;
   border-radius: 8px;
   margin: 15px 0;
 }
 
 .project-card ul {
-  padding-left: 18px;
+  text-align: left;
+  padding-left: 20px;
 }
 
-/* PROJECT LINK */
 .project-link {
   display: inline-block;
   margin-top: 12px;
-  color: #2563eb;
-  font-weight: bold;
+  padding: 8px 16px;
+  background: #2563eb;
+  color: white;
   text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
 }
 
-/* FOOTER */
 footer {
   background: #020617;
   color: white;
   text-align: center;
   padding: 20px;
-  font-size: 14px;
-  letter-spacing: 0.5px;
+  margin-top: 40px;
 }
