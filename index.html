@@ -7,8 +7,8 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: Arial, sans-serif;
       background: #ffffff;
       color: #333;
       line-height: 1.6;
@@ -23,62 +23,46 @@
 
     header img {
       width: 150px;
-      height: auto;
       border-radius: 50%;
-      margin: 20px 0;
       border: 3px solid #fff;
+      margin: 20px 0;
     }
 
-    nav a {
-      color: #fff;
-      margin: 0 10px;
+    header a {
+      color: #93c5fd;
       text-decoration: none;
+      margin: 0 8px;
       font-weight: bold;
     }
 
     section {
-      padding: 40px 20px;
       max-width: 1100px;
       margin: auto;
+      padding: 50px 20px;
     }
 
     h1, h2, h3 {
-      color: #1e3a8a;
+      color: #0f172a;
     }
 
-    .grid {
+    .skills, .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 25px;
     }
 
     .card {
       border: 1px solid #ddd;
       padding: 20px;
-      border-radius: 8px;
+      border-radius: 10px;
       background: #f9fafb;
     }
 
-    .project-card {
-      border: 1px solid #ddd;
-      padding: 25px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-      background: #f9fafb;
-    }
-
-    .project-card img {
+    .card img {
       max-width: 100%;
-      border: 1px solid #ccc;
-      margin: 15px 0;
       border-radius: 6px;
-    }
-
-    a {
-      color: #2563eb;
-      text-decoration: none;
-      font-weight: bold;
+      margin-bottom: 10px;
     }
 
     footer {
@@ -99,87 +83,99 @@
 
 <body>
 
+<!-- HERO / HEADER -->
 <header>
   <h1>Ranjan Kumar Upadhyay</h1>
 
-  <!-- PROFILE PHOTO -->
+  <!-- ✅ Profile Photo -->
   <img src="images/profile.jpg" alt="Ranjan Kumar Upadhyay">
 
-  <p>MCA (Cyber Security) | DevOps & Cloud Engineer (Fresher)</p>
+  <p>
+    MCA (Cyber Security) <br>
+    DevOps & Cloud Engineer (Fresher)
+  </p>
 
-  <nav>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <a href="resume/Ranjan_Resume.pdf" target="_blank">Resume</a>
-  </nav>
-
-  <p style="margin-top:15px;">
+  <p>
     <a href="https://github.com/rajankumarup56" target="_blank">GitHub</a> |
-    <a href="https://www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a" target="_blank">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a" target="_blank">LinkedIn</a> |
+    <a href="https://twitter.com/yourhandle" target="_blank">Twitter (X)</a> |
+    <a href="resume/Ranjan_Resume.pdf" target="_blank">Resume</a>
   </p>
 </header>
 
+<!-- ABOUT -->
 <section>
   <h2>About Me</h2>
   <p>
     I am an MCA (Cyber Security) student and DevOps & Cloud Engineering fresher
     with hands-on experience in AWS, CI/CD pipelines, containerization,
     monitoring, and event-driven architectures.
-    I focus on building secure, scalable, and production-ready cloud systems.
+  </p>
+  <p>
+    My focus is on building secure, scalable, and automated cloud systems using
+    DevOps best practices. I am actively seeking entry-level DevOps / Cloud
+    Engineer roles where I can learn, contribute, and grow.
   </p>
 </section>
 
-<section id="skills">
+<!-- SKILLS -->
+<section>
   <h2>Skills</h2>
-  <div class="grid">
+  <div class="skills">
     <div class="card">AWS (EC2, S3, IAM, SNS, SQS, Lambda)</div>
     <div class="card">Docker & Kubernetes</div>
-    <div class="card">CI/CD – Jenkins & GitHub</div>
+    <div class="card">CI/CD – Jenkins & GitHub Actions</div>
     <div class="card">Monitoring – CloudWatch, Prometheus, Grafana</div>
     <div class="card">Linux, Bash, Python, JavaScript</div>
     <div class="card">Terraform (Foundational)</div>
+    <div class="card">DevSecOps & Security Basics</div>
   </div>
 </section>
 
-<section id="projects">
+<!-- PROJECTS -->
+<section>
   <h2>Projects</h2>
 
-  <div class="project-card">
-    <h3>Secure AWS Event-Driven Architecture</h3>
+  <div class="projects">
 
-    <img src="images/aws-event-architecture.png" alt="AWS Event Driven Architecture">
+    <div class="card">
+      <h3>Secure AWS Event-Driven Architecture</h3>
+      <img src="images/aws-event-architecture.png" alt="AWS Event Driven Architecture">
+      <p>
+        Designed and implemented a serverless event-driven architecture using
+        AWS SNS, SQS, Lambda, and SES focusing on decoupling, scalability,
+        retry handling, and fault tolerance.
+      </p>
+      <a href="https://rajankumarup56.github.io/secure-aws-cloud-infrastructure/" target="_blank">
+        🔗 View Live Project
+      </a>
+    </div>
 
-    <p>
-      Designed a serverless event-driven architecture using
-      SNS → SQS → Lambda → SES focusing on decoupling,
-      buffering, retry handling, and fault tolerance.
-    </p>
+    <div class="card">
+      <h3>CI/CD Pipeline with Jenkins & Docker</h3>
+      <p>
+        Built automated CI/CD pipelines using Jenkins,
+        Dockerized applications, and deployed them on cloud infrastructure
+        following DevOps best practices.
+      </p>
+      <a href="https://github.com/rajankumarup56" target="_blank">
+        🔗 View on GitHub
+      </a>
+    </div>
 
-    <ul>
-      <li>SNS for event publishing</li>
-      <li>SQS for buffering & retry mechanism</li>
-      <li>Lambda for event processing</li>
-      <li>SES for email notifications</li>
-    </ul>
-
-    <a href="https://rajankumarup56.github.io/secure-aws-cloud-infrastructure/" target="_blank">
-      🔗 View Live Project
-    </a>
-  </div>
-
-  <div class="project-card">
-    <h3>CI/CD Pipeline with Jenkins & Docker</h3>
-    <p>
-      Built automated CI/CD pipelines using Jenkins,
-      Dockerized applications, and cloud deployments.
-    </p>
   </div>
 </section>
 
-<section id="contact">
+<!-- CONTACT -->
+<section>
   <h2>Contact</h2>
-  <p>Email: <strong>rajankumarup56@zohomail.com</strong></p>
+  <p>📧 Email: <strong>rajankumarup56@zohomail.com</strong></p>
+  <p>📞 Phone: <strong>+91 6205536067</strong></p>
+  <p>
+    🔗 <a href="https://www.linkedin.com/in/ranjan-kumar-upadhyay-18733039a" target="_blank">
+      LinkedIn Profile
+    </a>
+  </p>
 </section>
 
 <footer>
