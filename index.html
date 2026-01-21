@@ -9,10 +9,11 @@
 
 <body>
 
+<!-- HEADER / HERO -->
 <header>
   <img src="images/your-photo.png" alt="Ranjan Kumar Upadhyay">
   <h1>Ranjan Kumar Upadhyay</h1>
-  <h2>MCA (Cyber Security) | DevOps & Cloud Engineer (Fresher)</h2>
+  <h2>MCA (Cyber Security) | DevOps & Cloud Engineer</h2>
 
   <div class="links">
     <a href="mailto:rajankumarup56@zohomail.com">Email</a>
@@ -22,53 +23,59 @@
     <a href="https://x.com/RajanKumarup560" target="_blank">X</a>
     <a href="resume/Ranjan_Resume.pdf" target="_blank">Resume</a>
   </div>
+  <!-- ⚠ Note: On mobile, links may wrap. Fixed in CSS using flex-wrap -->
 </header>
 
+<!-- ABOUT ME -->
 <section>
   <h2>About Me</h2>
   <p>
-    MCA (Cyber Security) student with hands-on experience in AWS cloud services,
-    DevOps tools, CI/CD pipelines, Infrastructure as Code, and event-driven
-    architectures. Focused on building secure, scalable, and production-ready
-    cloud systems.
+    MCA (Cyber Security) student with strong hands-on understanding of
+    AWS, DevOps tools, CI/CD pipelines, Infrastructure as Code, and
+    event-driven cloud architectures. Actively building production-style
+    cloud projects for real-world readiness.
   </p>
+  <!-- ⚠ Suggestion: Could add 1–2 bullets summarizing key skills for instant scanability -->
 </section>
 
+<!-- SKILLS -->
 <section>
   <h2>Skills</h2>
   <div class="grid">
-    <div class="card"><img src="images/aws-icon.png" alt="AWS">AWS Cloud</div>
+    <div class="card"><img src="images/aws-icon.png" alt="AWS">AWS (EC2, S3, IAM, SNS, SQS, Lambda)</div>
     <div class="card"><img src="images/docker-icon.png" alt="Docker">Docker & Kubernetes</div>
     <div class="card"><img src="images/jenkins-icon.png" alt="Jenkins">CI/CD (Jenkins)</div>
-    <div class="card"><img src="images/monitoring-icon.png" alt="Monitoring">Monitoring Tools</div>
+    <div class="card"><img src="images/monitoring-icon.png" alt="Monitoring">Monitoring (CloudWatch, Prometheus, Grafana)</div>
     <div class="card"><img src="images/python-icon.png" alt="Python">Linux & Python</div>
-    <div class="card"><img src="images/terraform-icon.png" alt="Terraform">Terraform (IaC)</div>
+    <div class="card"><img src="images/terraform-icon.png" alt="Terraform">Terraform (Foundational)</div>
+    <!-- ⚠ Note: Icon sizes fixed in CSS to uniform 40x40px -->
   </div>
 </section>
 
+<!-- PROJECTS -->
 <section>
   <h2>Projects</h2>
-
   <div class="projects">
 
-    <!-- PROJECT 1 -->
-    <div class="project-card">
+    <!-- PROJECT 1 : FLAGSHIP (COMPLETE) -->
+    <div class="card project-card">
       <h3>Secure AWS Event-Driven Cloud Infrastructure</h3>
+
       <img src="images/aws-event-architecture.png" alt="AWS Event Driven Architecture Diagram">
 
       <p>
-        Designed and implemented a secure, scalable, and decoupled event-driven
-        architecture using AWS managed services.
+        Designed and implemented a secure, scalable, and decoupled
+        event-driven architecture using AWS managed services.
       </p>
 
-      <ul>
+      <ul style="text-align:left;">
         <li>AWS SNS for event publishing</li>
-        <li>AWS SQS for message buffering & retries</li>
-        <li>AWS Lambda for serverless processing</li>
+        <li>AWS SQS for message buffering & retry handling</li>
+        <li>AWS Lambda for serverless event processing</li>
         <li>AWS SES for automated email notifications</li>
       </ul>
 
-      <p><strong>Focus:</strong> Scalability, fault tolerance, loose coupling</p>
+      <p><strong>Key Focus:</strong> Scalability, fault tolerance, loose coupling</p>
 
       <a class="project-link"
          href="https://rajankumarup56.github.io/secure-aws-cloud-infrastructure/"
@@ -77,23 +84,27 @@
       </a>
     </div>
 
-    <!-- PROJECT 2 -->
-    <div class="project-card">
+    <!-- PROJECT 2 : SUPPORTING (IN PROGRESS) -->
+    <div class="card project-card">
       <h3>CI/CD Pipeline with Jenkins & Docker</h3>
 
       <p>
-        Built an automated CI/CD pipeline to streamline application build,
-        test, and deployment workflows using DevOps best practices.
+        Built an automated CI/CD pipeline to streamline application
+        build, test, and deployment workflows using industry-standard DevOps tools.
       </p>
 
-      <ul>
-        <li>Jenkins pipelines for automation</li>
-        <li>Docker for containerized builds</li>
-        <li>GitHub for source control & triggers</li>
-        <li>Linux & Bash scripting</li>
+      <ul style="text-align:left;">
+        <li>Jenkins pipelines for build & deployment automation</li>
+        <li>Docker for containerized application builds</li>
+        <li>GitHub for source control & pipeline triggers</li>
+        <li>Linux & Bash scripting for automation</li>
       </ul>
 
-      <p><strong>Status:</strong> Enhancing with DevSecOps & Kubernetes</p>
+      <p>
+        <strong>Status:</strong>
+        Enhancing pipeline with DevSecOps security scans and Kubernetes deployment.
+        <!-- ⚠ Note: Clarify to recruiters if this is active learning vs completed work -->
+      </p>
 
       <a class="project-link"
          href="https://github.com/rajankumarup56"
@@ -105,8 +116,9 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  © 2026 Ranjan Kumar Upadhyay | DevOps & Cloud Engineer
+  © 2026 Ranjan Kumar Upadhyay
 </footer>
 
 </body>
