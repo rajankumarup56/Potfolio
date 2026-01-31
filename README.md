@@ -1,3 +1,7 @@
+> ⚠️ NOTE  
+> This repository represents an earlier personal project.
+> My current production-focused DevOps and AWS projects are pinned on my GitHub profile.
+
 # Portfolio Website – DevOps / Cloud Fresher
 
 This is my personal portfolio website built to showcase my skills, projects,
